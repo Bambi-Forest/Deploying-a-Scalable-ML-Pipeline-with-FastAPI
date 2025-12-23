@@ -7,8 +7,6 @@ from ml.model import inference, load_model
 
 
 # DO NOT MODIFY
-
-
 class Data(BaseModel):
     age: int = Field(..., example=37)
     workclass: str = Field(..., example="Private")
@@ -52,14 +50,10 @@ categorical_features = [
 ]
 
 
-# TODO: create a GET on the root giving a welcome message
-
-
 @app.get("/")
 async def get_root():
     """Say hello!"""
     return {"message": "Hello from the API!"}
-
 
 
 # TODO: create a POST on a different path that does model inference
@@ -84,6 +78,3 @@ async def post_inference(data: Data):
     # do not need to pass lb as input
     pred = inference(model, data_processed)[0]
     return {"result": apply_label([pred])}
-
-
-
