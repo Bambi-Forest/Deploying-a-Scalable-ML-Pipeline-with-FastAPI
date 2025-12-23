@@ -103,6 +103,7 @@ def performance_on_categorical_slice(
     lb,
     model
 ):
+
     """Computes the model metrics on a slice
     of the data specified by a column name and
     Processes the data using one hot encoding
