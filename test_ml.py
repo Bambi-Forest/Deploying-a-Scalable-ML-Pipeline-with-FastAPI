@@ -1,8 +1,7 @@
 import numpy as np
-import pandas as pd
-import pytest
 
-from ml.model import train_model, inference, compute_model_metrics
+
+from ml.model import train_model, compute_model_metrics
 
 
 # TODO: implement the first test. Change the function name and input as needed
@@ -21,8 +20,6 @@ def test_train_model_returns_model():
     assert hasattr(model, "predict")
 
 
-
-# TODO: implement the second test. Change the function name and input as needed
 def test_model_is_random_forest():
     """
     Test that the trained model is a RandomForestClassifier.
@@ -31,12 +28,8 @@ def test_model_is_random_forest():
     y = np.array([0, 1])
 
     model = train_model(X, y)
-
     assert model.__class__.__name__ == "RandomForestClassifier"
 
-
-
-# TODO: implement the third test. Change the function name and input as needed
 def test_compute_model_metrics_output():
     """
     Test that compute_model_metrics returns precision, recall, and fbeta
@@ -50,4 +43,3 @@ def test_compute_model_metrics_output():
     assert 0.0 <= precision <= 1.0
     assert 0.0 <= recall <= 1.0
     assert 0.0 <= fbeta <= 1.0
-
