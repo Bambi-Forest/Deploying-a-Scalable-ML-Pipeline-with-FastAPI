@@ -8,6 +8,7 @@ from ml.model import train_model, compute_model_metrics
 
 
 def test_train_model_returns_model():
+
     """
     Test that train_model returns a trained model object.
     """
@@ -21,6 +22,7 @@ def test_train_model_returns_model():
 
 
 def test_model_is_random_forest():
+
     """
     Test that the trained model is a RandomForestClassifier.
     """
@@ -30,7 +32,9 @@ def test_model_is_random_forest():
     model = train_model(X, y)
     assert model.__class__.__name__ == "RandomForestClassifier"
 
+
 def test_compute_model_metrics_output():
+
     """
     Test that compute_model_metrics returns precision, recall, and fbeta
     within valid ranges.
