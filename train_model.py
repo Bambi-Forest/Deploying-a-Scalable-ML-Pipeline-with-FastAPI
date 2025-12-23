@@ -21,9 +21,11 @@ print(data_path)
 data = pd.read_csv(data_path)
 
 # TODO: split the provided data to have a train dataset and a test dataset
-# Optional enhancement, use K-fold cross validation instead of a
+# Optional enhancement, use
+# K-fold cross validation instead of a
 # train-test split.
-train, test = train_test_split(data, test_size=0.2) # Your code here
+
+train, test = train_test_split(data, test_size=0.2)
 
 # DO NOT MODIFY
 cat_features = [
@@ -101,4 +103,5 @@ for col in cat_features:
         )
         with open("slice_output.txt", "a") as f:
             print(f"{col}: {slicevalue}, Count: {count:,}", file=f)
-            print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}", file=f)
+            print(f"Precision: {p:.4f} | Recall: {r:.4f} | F1: {fb:.4f}",
+                  file=f)

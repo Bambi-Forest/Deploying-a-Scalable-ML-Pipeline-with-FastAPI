@@ -1,6 +1,12 @@
 name: Python CI
 
-on: [push]
+on:
+  push:
+    branches:
+      #- main
+      #- master
+      - dev
+#on: [push]
 
 jobs:
   build:
